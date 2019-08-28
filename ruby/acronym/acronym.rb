@@ -1,19 +1,5 @@
-# version alpha
-
 class Acronym
-  class << self
-    def abbreviate(word)
-      word.split(/\W+/).map { |w| w[0].upcase }.join
-    end
+  def self.abbreviate(string)
+    string.split(/\W+/).map { |word| word[0].capitalize }.join
   end
 end
-
-puts Acronym.abbreviate('hello chris man')
-
-# version beta
-#
-# def abbreviate_two(word)
-#   word.scan(/\b\w/).join.upcase
-# end
-# 
-# puts abbreviate_two('hello darkness my old friend')
